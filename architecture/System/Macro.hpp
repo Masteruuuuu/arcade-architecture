@@ -8,7 +8,7 @@
 #ifndef MACRO_HPP
     #define MACRO_HPP
 
-    #define HEIGHT 600
-    #define WIDTH 800
+    #define WINDOW_HEIGHT 600
+    #define WINDOW_WIDTH 800
 
 #endif

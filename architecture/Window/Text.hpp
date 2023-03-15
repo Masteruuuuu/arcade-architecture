@@ -70,6 +70,6 @@ namespace arcade {
             float speed;
             float angle;
     };
-}
+};
 
 #endif

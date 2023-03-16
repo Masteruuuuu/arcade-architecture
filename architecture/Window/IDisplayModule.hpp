@@ -13,6 +13,7 @@
 
 namespace arcade {
 
+    template <typename T>
     class IDisplayModule {
 
         public:
@@ -40,6 +41,8 @@ namespace arcade {
             /* Draw the elements */
             virtual void draw(/* Reflechir au parametre mais peut etre une structure draw*/) = 0;
             /*******/
+
+            virtual T getWindow() = 0;
     };
 };
 

@@ -11,7 +11,6 @@
     #include "Event.hpp"
 namespace arcade {
 
-    template <typename T>
     class IGameModule {
 
         public:
@@ -38,8 +37,6 @@ namespace arcade {
 
             virtual void run() = 0;
             virtual void restart() = 0;
-
-            virtual T getWindow() = 0;
     };
 };
 

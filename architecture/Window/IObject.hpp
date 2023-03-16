@@ -21,7 +21,7 @@ namespace arcade {
         public:
             virtual ~IObject() = default;
             /* draw our Object */
-            void draw();
+            virtual void draw() = 0;
             /*******/
 
             /* Postion Object */
@@ -29,11 +29,11 @@ namespace arcade {
             virtual std::vector<float> getPosition() const = 0;
             /*******/
 
-            /* Manage move text */
+            /* Manage move Object */
             virtual void move(float x, float y) = 0;
             /*******/
 
-            /* Manage speed text */
+            /* Manage speed Object */
             /* We need to make a global speed scale example:
                 1 charachter in ncurses = 10 pixel in other lib
                 so when we change lib between every group it doesn't break
@@ -54,12 +54,20 @@ namespace arcade {
             virtual void setSprite(std::vector<float> pos, std::vector<float> size, std::string image) = 0;
             /*******/
 
-            /* Manage rotation text */
+            /* Manage rotation Object */
             virtual void rotate(float angle) = 0;
             virtual float getAngle() const = 0;
             /*******/
+            
+            /* Manage object tag */
+            // Tag are useful to know what type an object is. Useful for collision or movment.
+            virtual void setTag(std::string tag) = 0;
+            virtual std::string getTag(void) = 0;
+            /*******/
+            
+            
 
-            /* Manage color text */
+            /* Manage color Object */
             virtual void setColor(Color) = 0;
             virtual Color getColor() const = 0;
             /*******/
@@ -68,9 +76,9 @@ namespace arcade {
             virtual bool isCollide(IObject &) = 0;
             /*******/
 
-            /* Manage size text */
-            void setSize(std::vector<float> size);
-            std::vector<float> getSize() const;
+            /* Manage size Object */
+            virtual void setSize(std::vector<float> size) = 0;
+            virtual std::vector<float> getSize() const = 0;
             /*******/
     };
 }

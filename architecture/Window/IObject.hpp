@@ -58,14 +58,12 @@ namespace arcade {
             virtual void rotate(float angle) = 0;
             virtual float getAngle() const = 0;
             /*******/
-            
+
             /* Manage object tag */
             // Tag are useful to know what type an object is. Useful for collision or movment.
             virtual void setTag(std::string tag) = 0;
-            virtual std::string getTag(void) = 0;
+            virtual std::string getTag(void) const = 0;
             /*******/
-            
-            
 
             /* Manage color Object */
             virtual void setColor(Color) = 0;

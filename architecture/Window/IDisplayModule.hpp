@@ -42,7 +42,7 @@ namespace arcade {
             virtual void draw(/* Reflechir au parametre mais peut etre une structure draw*/) = 0;
             /*******/
 
-            virtual T getWindow() = 0;
+            virtual T *getWindow() = 0;
     };
 };
 

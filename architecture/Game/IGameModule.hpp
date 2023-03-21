@@ -9,7 +9,6 @@
     #define IGAMEMODULE_HPP_
 
     #include "Event.hpp"
-
 namespace arcade {
 
     class IGameModule {

@@ -20,11 +20,8 @@ namespace arcade {
             virtual ~IDisplayModule() = default;
 
             /* Create the window */
-            virtual void create(std::string const &name) = 0;
-            /*******/
-
-            /* Handle Event in Window */
-            virtual void pollEvent(Event) = 0; /* Peut être quelle renvoie un booleen (revoir son type de retour)*/
+            virtual void createWindow(std::string const &name) = 0;
+            virtual void destroyWindow() = 0;
             /*******/
 
             /* Display window */
@@ -32,7 +29,7 @@ namespace arcade {
             /*******/
 
             /* Open, close and clear window */
-            virtual void open() = 0;
+            virtual void isOpen() = 0;
             virtual void close() = 0;
             virtual void clear() = 0;
             /*******/
@@ -41,6 +38,6 @@ namespace arcade {
             virtual void draw(/* Reflechir au parametre mais peut etre une structure draw*/) = 0;
             /*******/
     };
-};
+}
 
 #endif

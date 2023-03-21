@@ -29,7 +29,7 @@ namespace arcade {
             /*******/
 
             /* Open, close and clear window */
-            virtual void open() = 0;
+            virtual void isOpen() = 0;
             virtual void close() = 0;
             virtual void clear() = 0;
             /*******/
@@ -38,6 +38,6 @@ namespace arcade {
             virtual void draw(/* Reflechir au parametre mais peut etre une structure draw*/) = 0;
             /*******/
     };
-};
+}
 
 #endif

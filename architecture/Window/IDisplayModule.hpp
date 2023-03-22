@@ -10,6 +10,8 @@
 
     #include <string>
     #include "Event.hpp"
+    #include "IObject.hpp"
+    #include "IMenu.hpp"
 
 namespace arcade {
 
@@ -35,7 +37,8 @@ namespace arcade {
             /*******/
 
             /* Draw the elements */
-            virtual void draw(/* Reflechir au parametre mais peut etre une structure draw*/) = 0;
+            virtual void drawObject(IObject &) = 0;
+            virtual void drawMenu(IMenu &) = 0;
             /*******/
     };
 }

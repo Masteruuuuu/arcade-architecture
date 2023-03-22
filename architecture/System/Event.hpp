@@ -16,6 +16,7 @@ namespace arcade {
         bool down;
         bool left;
         bool right;
+        bool ente;
         bool fire_1;
         bool fire_2;
         bool spe_1;

@@ -13,13 +13,14 @@
     #include "Color.hpp"
 
 namespace arcade {
-    /* 
-        When doing graphical libs dont forget to respect the IObject interface 
+    /*
+        When doing graphical libs dont forget to respect the IObject interface
         and dont add any other function that you would use in your game.
     */
     class IObject {
         public:
             virtual ~IObject() = default;
+
             /* draw our Object */
             virtual void draw() = 0;
             /*******/

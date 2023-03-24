@@ -9,6 +9,7 @@
     #define IGAMEMODULE_HPP_
 
     #include "Event.hpp"
+    #include <vector>
 
 namespace arcade {
 
@@ -19,7 +20,7 @@ namespace arcade {
             virtual ~IGameModule() = default;
 
             /* Handle Event */
-            virtual void event(Event) = 0;
+            virtual std::vector<Event> event(Event) = 0;
             /*******/
 
             /* Process score */

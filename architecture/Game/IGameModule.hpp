@@ -20,7 +20,9 @@ namespace arcade {
             virtual ~IGameModule() = default;
 
             /* Handle Event */
-            virtual std::vector<Event> event(Event) = 0;
+            virtual arcade::Event event(Event) = 0;
+            // On return 1 évènement. 
+            // Chacun est libre de traiter les évènements dans un vecteur ou non.
             /*******/
 
             /* Process score */

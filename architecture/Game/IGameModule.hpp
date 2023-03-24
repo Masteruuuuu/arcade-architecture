@@ -21,6 +21,8 @@ namespace arcade {
 
             /* Handle Event */
             virtual arcade::Event event(Event) = 0;
+            virtual void set_events(Event) = 0;
+            virtual std::vector<arcade::Event> get_events() const = 0;
             // On return 1 évènement. 
             // Chacun est libre de traiter les évènements dans un vecteur ou non.
             /*******/
